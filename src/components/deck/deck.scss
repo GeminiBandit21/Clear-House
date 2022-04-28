@@ -1,0 +1,15 @@
+.deck{
+    position: relative;
+    display: flex;
+    background-color: rgb(32, 66, 129);
+    width: 80px;
+    height: 120px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    padding:5px;
+    border: 1px solid rgb(51, 52, 102);
+    color: white;
+    //font-size: 4rem;
+    margin: 10px;
+}
