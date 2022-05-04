@@ -1,14 +1,14 @@
 .card{
     position: relative;
     display: flex;
-    background-color: rgb(59, 80, 119);
+    background-color: #eeeeee;
     width: 120px;
     height: 180px;
     border-radius: 15px;
     align-items: center;
     justify-content: center;
     padding:5px;
-    border: 1px solid rgb(51, 52, 102);
+    //border: 0.5px solid #010203;
     color: white;
     font-family: 'Oswald';
     font-size: 2rem;
@@ -28,4 +28,12 @@
         right: .5rem;
         transform:rotate(180deg);
     }
+
+}
+.red{
+    color: crimson;
+
+}
+.black{
+    color:#222121;
 }

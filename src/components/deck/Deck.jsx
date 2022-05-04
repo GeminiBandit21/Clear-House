@@ -6,11 +6,14 @@ import "./deck.scss"
 
 
 
-export default function Deck(suit, value) {
+export default function Deck() {
+
+
   return (
-    <div>Deck
-      <Card
-      />
+    <div className="deck">
+      <div classname ="design">
+deck
+      </div>
     </div>
   )
 }
