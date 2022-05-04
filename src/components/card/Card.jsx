@@ -1,16 +1,16 @@
 import React from 'react'
 import "./card.scss"
-const SUITS=["♠","♥","♣","♦"]
-const VALUES =["A","2","3","4","5","6","7","8","9","10","K","Q","J"]
 
-function cardEle(props) {
-  return (
-    <div className="card">
-        <div className="top">{props.value}{props.suit}</div>
-        <div className="middle">{props.suit}</div>
-        <div className="bottom">{props.value}{props.suit}</div>
-    </div>
-  )
-}
 
-export default cardEle
+export default function Card({value, suit}) {
+    return(
+        <div className="card">
+            <div className="top">{value}{suit}</div>
+            <div className="middle">{suit}</div>
+            <div className="bottom">{value}{suit}</div>
+        </div>
+        );
+    }
+
+
+

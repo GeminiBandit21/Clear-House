@@ -1,17 +1,51 @@
 import './App.scss';
 import Card from './components/card/Card';
-import Deck from './components/deck/Deck.jsx';
+import { useEffect,useState } from 'react'
+import Deck from './components/deck/Deck';
+const SUITS=["♠","♥","♣","♦"]
+const VALUES =["A","2","3","4","5","6","7","8","9","10","K","Q","J"]
+
+
 
 function App() {
+  const [cards, setCards] =useState([])
+
+  const cleanDeck = (value, suit) =>{
+    let deck = []
+    for(let i = 0; i < SUITS.length; i++){
+      for(let x=0; x < VALUES.length; x++){
+        let card = {value: VALUES[x], suit: SUITS[i]};
+        deck.push(card);
+        deck.map((card)=> ({...card, id:({suit}+{value})}))
+        console.log(card);
+        setCards(deck)
+
+      }
+    }
+
+    // return SUITS.flatMap(suit =>{
+    //     return VALUES.map(value=>{
+    //         return new Card(suit, value)
+    //     })
+    // })
+  }
+
+useEffect(() =>{
+   //makeDeck()
+  //console.log(cleanDeck)
+})
+
   return (
     <div className="App">
+      <h1>Black Jack</h1>
+      <button onClick={cleanDeck}>Start Game</button>
       <div className="DecksAligned">
-      <Deck/>
-      <Card value={10} suit={"♥"}/>
-      <Card value={8} suit={"♦"}/>
-
+      {cards.map(card => (
+      <Card
+      value={card.value}
+      suit={card.suit}
+      />))}
       </div>
-
     </div>
   );
 }

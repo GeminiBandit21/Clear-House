@@ -1,11 +1,16 @@
 import React from 'react'
+import Card from '../card/Card'
 import "./deck.scss"
 
 
-const Deck = () => {
+
+
+
+export default function Deck(suit, value) {
   return (
-    <div className="deck"></div>
+    <div>Deck
+      <Card
+      />
+    </div>
   )
 }
-
-export default Deck
