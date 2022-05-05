@@ -11,9 +11,7 @@ export default function Deck() {
 
   return (
     <div className="deck">
-      <div classname ="design">
 deck
-      </div>
     </div>
   )
 }

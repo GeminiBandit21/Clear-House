@@ -7,7 +7,8 @@
 button {
   width:300px;
   height: 50px;
-  border-radius: 20px;
+  border: none;
+  border-radius: 30px;
   background-color: rgba(54, 95, 230, 0.753);
   color: #fff;
   font-size: 24px;
@@ -16,8 +17,7 @@ button {
 }
 
 button:hover{
-  background-color: crimson;
-
+  background-image: linear-gradient(to right, #dc143c, #d72f86, #ae5dbe, #6a7ed9, #0093d5);
 }
 
  .DecksAligned{
